@@ -1,0 +1,17 @@
+.layout {
+  color: var(--txt-color);
+}
+
+.layout__content {
+  padding-left: var(--sidebar-width);
+  background-color: var(--second-bg);
+  min-height: 100vh;
+}
+
+.layout_content-main {
+  padding: 30px;
+}
+
+.row {
+  margin-left: 10px !important;
+}
