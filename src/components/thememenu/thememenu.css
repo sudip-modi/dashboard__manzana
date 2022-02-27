@@ -7,7 +7,7 @@
   padding: 20px;
   z-index: 99;
   box-shadow: var(--box-shadow);
-  transition: right 0.5s var(--transition-cubic);
+  transition: right 0.5s ease;
   background-color: var(--main-bg);
 }
 
