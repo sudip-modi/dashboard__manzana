@@ -5,6 +5,7 @@ import Chart from "react-apexcharts";
 import { Link } from "react-router-dom";
 import Table from "../components/table/Table";
 import Badge from "../components/badge/Badge";
+import { useSelector } from "react-redux";
 
 const chartOptions = {
   series: [
@@ -155,6 +156,8 @@ const renderOrderBody = (item, index) => (
   </tr>
 );
 const Dashboard = () => {
+  const themeReducer = useSelector((state) => state.ThemeReducer.mode);
+
   return (
     <div className="dashboard-wrapper">
       <h2 className="page-header">Dashboard</h2>
@@ -176,7 +179,14 @@ const Dashboard = () => {
           <div className="card full-height">
             {/* chart */}
             <Chart
-              options={chartOptions.options}
+              options={
+                themeReducer === "theme-mode-dark"
+                  ? { ...chartOptions.options, theme: { mode: "dark" } }
+                  : {
+                      ...chartOptions.options,
+                      theme: { mode: "light" },
+                    }
+              }
               series={chartOptions.series}
               type="line"
               height="100%"

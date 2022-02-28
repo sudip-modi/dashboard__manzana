@@ -60,7 +60,7 @@
 .topnav__right-user {
   display: flex;
   align-items: center;
-}
+} 
 
 .topnav__right-user__image {
   width: 40px;
@@ -78,3 +78,4 @@
   font-size: 1rem;
   font-weight: 600;
 }
+
